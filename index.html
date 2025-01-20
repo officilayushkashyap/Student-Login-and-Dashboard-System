@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Portal</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="https://aktu.ac.in/images/logo.png" type="image/x-icon">
+</head>
+<style>
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: block;
+    padding: 15px;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #444;
+}
+
+</style>
+<body>
+    <header>
+        <div class="nav_bar">
+            <img class="logo" src="https://aktu.ac.in/images/uptu_logo.png" alt="University Logo" loading="lazy">
+            <img class="name" src="https://aktu.ac.in/images/logo-1.jpg" alt="University Name" loading="lazy">
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Welcome to the University Portal</h1>
+            <p>Please choose an action to proceed.</p>
+            <div class="action-buttons">
+                <a class="btn" href="login.html">Login</a>
+                <a class="btn" href="Register.html">Register</a>
+                <a class="btn" href="Forgot-password.html">Forgot Password</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 University Name. All rights reserved.</p>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
