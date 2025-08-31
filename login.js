@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const registerForm = document.getElementById('registerForm');
     const errorMessage = document.getElementById('errorMessage');
 
-    registerForm.addEventListener('submit', function(event) {
+    registerForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        
+
         const name = document.getElementById('name').value.trim();
         const course = document.getElementById('course').value;
         const rollNo = document.getElementById('rollNo').value.trim();
@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // For demonstration, we'll just show a success message
         showError('');
         alert('Form submitted successfully!');
+        window.location.href = "login.html";
     });
 
     function showError(message) {
@@ -48,32 +49,42 @@ document.addEventListener('DOMContentLoaded', function() {
         return re.test(email);
     }
 });
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const forgotPasswordForm = document.getElementById('forgotPasswordForm');
 
-    forgotPasswordForm.addEventListener('submit', function(event) {
+    forgotPasswordForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
         const email = document.getElementById('email').value.trim();
-        const mobile = document.getElementById('Mobile').value.trim();
+        const mobile = document.getElementById('mobile').value.trim(); // ⚠️ use lowercase id
 
+        // Require at least one field
         if (email === '' && mobile === '') {
-            alert('Please enter either your email address or mobile number.');
+            alert('Please enter either your Email or Mobile number.');
             return;
         }
 
+        // Validate email if entered
         if (email !== '' && !validateEmail(email)) {
-            alert('Please enter a valid email address.');
+            alert('Please enter a valid Email address.');
             return;
         }
 
+        // Validate mobile if entered
         if (mobile !== '' && !validateMobile(mobile)) {
-            alert('Please enter a valid 10-digit mobile number.');
+            alert('Please enter a valid 10-digit Mobile number.');
             return;
         }
 
-        // Proceed with form submission (e.g., send data to the server)
-        alert('Password reset link sent successfully!');
+        // Success
+        if (email !== '') {
+            alert('A password reset link has been sent to your email.');
+        } else {
+            alert('A password reset code has been sent to your mobile.');
+        }
+
+        // Redirect back to login page
+        window.location.href = "login.html";
     });
 
     function validateEmail(email) {
@@ -85,11 +96,12 @@ document.addEventListener('DOMContentLoaded', function() {
         return /^\d{10}$/.test(mobile);
     }
 });
-document.addEventListener('DOMContentLoaded', function() {
+
+document.addEventListener('DOMContentLoaded', function () {
     const loginForm = document.getElementById('loginForm');
     const errorMessage = document.getElementById('errorMessage');
 
-    loginForm.addEventListener('submit', function(event) {
+    loginForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
         const enrollmentNo = document.getElementById('Enrollment No.').value.trim();
@@ -105,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // For demonstration, we'll just show a success message
         showError('');
         alert('Login successful!');
+        window.location.href = "Database.html";
         // You can redirect the user or take another action here
     });
 
@@ -117,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const dashboardSections = document.querySelectorAll('.dashboard section');
     const navLinks = document.querySelectorAll('nav ul li a');
 
@@ -130,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listeners to navigation links
     navLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
+        link.addEventListener('click', function (event) {
             event.preventDefault();
             const targetSection = document.querySelector(link.getAttribute('href'));
 
