@@ -4,35 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Portal</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="login.css">
     <link rel="shortcut icon" href="https://aktu.ac.in/images/logo.png" type="image/x-icon">
 </head>
-<style>
-  .action-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
-}
 
-.btn {
-    display: block;
-    padding: 15px;
-    background-color: brown;
-    color: white;
-    text-align: center;
-    border-radius: 4px;
-    font-size: 18px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #444;
-}
-
-</style>
 <body>
     <header>
         <div class="nav_bar">
@@ -43,13 +19,24 @@
 
     <main>
         <div class="container">
-            <h1>Welcome to the University Portal</h1>
-            <p>Please choose an action to proceed.</p>
-            <div class="action-buttons">
-                <a class="btn" href="login.html">Login</a>
-                <a class="btn" href="Register.html">Register</a>
-                <a class="btn" href="Forgot-password.html">Forgot Password</a>
-            </div>
+            <h1>Welcome Back</h1>
+            <p>Please enter your credentials to log in.</p>
+            <form action="#" method="post" id="loginForm" aria-labelledby="loginFormTitle">
+                <div class="form-group">
+                    <label for="Enrollment No.">Enrollment No.</label>
+                    <input type="number" id="Enrollment No." name="Enrollment No."
+                        placeholder="Enter Your Enrollment No." required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Your Password" required
+                        aria-required="true">
+                </div>
+                <div class="error-message" id="errorMessage" style="display:none;"></div>
+                <button type="submit">Login</button>
+            </form>
+            <p class="redirect">Don't have an account? <a href="Register.html">Register here</a></p>
+            <p class="redirect"><a href="Forgot-password.html">Forgot your password?</a></p>
         </div>
     </main>
 
