@@ -170,13 +170,13 @@ footer {
   }
 
   .logo {
-    width: 80px;
+    width: 60px;
     height: auto;
   }
 
   .name {
     margin-top: 10px;
-    max-width: 400px;
+    max-width: 300px;
   }
 
   .container {
@@ -187,13 +187,13 @@ footer {
 
 @media (max-width: 480px) {
   .logo {
-    width: 60px;
+    width: auto;
     height: auto;
   }
 
   .name {
     margin-top: 10px;
-    max-width: 300px;
+    max-width: auto;
   }
 
   h1 {
@@ -214,3 +214,4 @@ footer {
     font-size: 12px;
   }
 }
+
