@@ -1,274 +1,181 @@
-/* Basic Reset */
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: brown;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    
-   
+  font-family: Arial, sans-serif;
+  background-color: brown;
+  color: black;
+  line-height: 1.5;
 }
 
+/* HEADER */
 header {
-    background-color: rgb(255, 255, 255);
-    color: white;
-   
-    padding: 20px 0;
+  background-color: white;
+  width: 100%;
+  padding: 10px 20px;
 }
 
 .nav_bar {
-   background-color: white;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 10px;
 }
 
 .logo {
-   width: 100px;
-   background-color: white;
-}
-.name{
-    width: 700px;
-    padding-top: -50px;
+  width: 100px;
+  height: auto;
 }
 
+.name {
+  max-width: 700px;
+  height: auto;
+  padding-left: 15px;
+}
 
-
+/* CONTAINER */
 .container {
-    max-width: 400px;
-    margin: 50px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  max-width: 450px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
-h1,h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
-    background-color: white;
+h1, h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
 }
 
 p {
-    margin-bottom: 15px;
-    background-color: white;
+  margin-bottom: 15px;
 }
 
 .form-group {
-    margin-bottom: 15px;
-    text-align: left;
-    background-color: white;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    background-color: white;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="Enrollment No."],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="Mobile"],
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid brown;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid brown;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
-input:focus,
-select:focus
-optgroup:focus {
-    border-color: #007bff;
-    outline: none;
-    background-color: #f0f4f8;
+input:focus, select:focus {
+  border-color: #007bff;
+  background-color: #f9f9f9;
+  outline: none;
 }
 
-
-
-.error-message {
-    color: red;
-    margin-top: 10px;
-    font-size: 0.9em;
-    display: none; /* Hidden by default */
+/* BUTTON */
+button, .btn {
+  width: 100%;
+  padding: 12px;
+  background-color: brown;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
+button:hover, .btn:hover {
+  background-color: white;
+  color: brown;
+  border: 2px solid brown;
+}
+
+/* LINKS */
 .redirect {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
+.redirect a {
+  color: brown;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.redirect a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
 footer {
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  color: brown;
+  margin-top: 30px;
+}
+
+/* DASHBOARD */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.dashboard section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav_bar {
+    flex-direction: row;
     text-align: center;
-    padding: 2px 0;
-    background-color: rgb(247, 247, 247);
+  }
+
+  .name {
+    margin-top: 10px;
+    max-width: 150px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 20px auto;
+  }
 }
 
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.3rem;
+  }
 
-button,.submit {
-    width: 100%;
+  .container {
+    padding: 15px;
+  }
+
+  button, .btn {
+    font-size: 0.9rem;
     padding: 10px;
-    background-color: brown;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
+  }
 
-button:hover {
-    background-color: white;
-    color: brown;
+  footer {
+    font-size: 12px;
+  }
 }
-.submit{
-    background-color: transparent;
-    color: black;
-    text-decoration: none;
-}
-.click{
-    background-color: white;
-}
-    /* Basic Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        background-color: brown;
-    }
-    
-    body {
-        font-family: Arial, sans-serif;
-        
-       
-    }
-    
-    header {
-        background-color: rgb(255, 255, 255);
-        color: white;
-       
-        padding: 20px 0;
-    }
-    
-    .nav_bar {
-       background-color: white;
-    }
-    
-    .logo {
-       width: 100px;
-       background-color: white;
-    }
-    .name{
-        width: 700px;
-        padding-top: -50px;
-    }
-    
-    
-    
-    .container {
-        max-width: 400px;
-        margin: 50px auto;
-        background: white;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-    
-    h1,h2 {
-        margin-bottom: 10px;
-        font-size: 24px;
-        background-color: white;
-    }
-    
-    p {
-        margin-bottom: 15px;
-        background-color: white;
-    }
-    
-    .form-group {
-        margin-bottom: 15px;
-        text-align: left;
-        background-color: white;
-    }
-    
-    label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-        background-color: white;
-    }
-    
-    input[type="text"],
-    input[type="number"],
-    input[type="Enrollment No."],
-    input[type="password"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="Mobile"],
-    select {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid brown;
-        border-radius: 4px;
-        font-size: 16px;
-        background-color: white;
-    }
-    
-    input:focus,
-    select:focus
-    optgroup:focus {
-        border-color: #007bff;
-        outline: none;
-        background-color: #f0f4f8;
-    }
-    
-    
-    
-    .error-message {
-        color: red;
-        margin-top: 10px;
-        font-size: 0.9em;
-        display: none; /* Hidden by default */
-    }
-    
-    .redirect {
-        margin-top: 15px;
-    }
-    
-    footer {
-        text-align: center;
-        padding: 2px 0;
-        background-color: brown;
-    }
-    a{
-        background-color: white;
-       
-    }
-    .Login{
-    background-color: brown;
-    color: black;
-    }
-    button {
-        width: 100%;
-        padding: 10px;
-        background-color: brown;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-    }
-    
-    button:hover {
-        background-color: white;
-        color: brown;
-    }
