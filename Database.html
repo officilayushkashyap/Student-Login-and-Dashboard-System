@@ -62,7 +62,7 @@
     }
 
     nav ul li a:hover {
-      background-color: #ddd;
+      background-color: brown;
     }
 
     /* Hamburger */
@@ -91,7 +91,7 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       margin-top: 20px;
-      background-color:white;
+      background-color: white;
     }
 
     .dashboard section {
@@ -119,16 +119,22 @@
     @media (max-width: 992px) {
       .nav_bar {
         flex-wrap: nowrap;
+        width: auto;
       }
 
+
       .name {
-        max-width: 200px;
+        max-width: 500px;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 792px) {
       .menu-toggle {
         display: block;
+      }
+
+      .name {
+        max-width: 300px;
       }
 
       nav {
@@ -141,9 +147,10 @@
         align-items: center;
         width: 100%;
         padding: 10px 0;
-        background: #f9f9f9;
+        background: white;
         border-radius: 8px;
         margin-top: 10px;
+        box-shadow: 0 4px 8px rgba(249, 1, 1, 0.1);
       }
 
       nav ul li {
@@ -228,4 +235,3 @@
 </body>
 
 </html>
-
