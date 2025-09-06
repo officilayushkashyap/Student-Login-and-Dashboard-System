@@ -186,15 +186,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .logo {
-    width: auto;
-    height: auto;
-  }
-
-  .name {
-    margin-top: 10px;
-    max-width: auto;
-  }
 
   h1 {
     font-size: 1.3rem;
@@ -214,4 +205,5 @@ footer {
     font-size: 12px;
   }
 }
+
 
