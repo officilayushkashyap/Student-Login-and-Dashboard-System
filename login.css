@@ -151,7 +151,7 @@ footer {
     text-align: center;
   }
   .logo{
-    width: 60px;
+    width: 55px;
   }
   .name {
     margin-top: 10px;
@@ -165,6 +165,9 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .logo{
+    width: 40px;
+  }
   h1 {
     font-size: 1.3rem;
   }
@@ -182,3 +185,4 @@ footer {
     font-size: 12px;
   }
 }
+
